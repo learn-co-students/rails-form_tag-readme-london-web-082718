@@ -1,5 +1,4 @@
-# # require 'rspec_helper'
-# require 'rspec/rails'
+require 'rails_helper'
 
 describe 'new post' do
   it 'ensures that the form route works with the /new action' do
