@@ -112,3 +112,139 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-24 11:06:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 546ms (Views: 535.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2018-09-24 11:06:18 +0100
+
+
+Started POST "/posts" for ::1 at 2018-09-24 11:06:23 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"test", "description"=>"tester"}, "authenticity_token"=>"tB9XG38BqRpDRRn2r2aZo39IySqECLx7/CGw9kOfeY7O7xD24zakpmapufbc5VOmP+Tz0+opY5h5jW+eGkVR3A=="}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["description", "tester"], ["created_at", "2018-09-24 10:06:23.758666"], ["updated_at", "2018-09-24 10:06:23.758666"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-24 11:06:23 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post/new" for ::1 at 2018-09-24 11:11:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/post/new"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/billieadmin/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/billieadmin/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/billieadmin/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.2ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (179.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-24 11:11:20 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:3: syntax error, unexpected ':', expecting ')'
+...uffer.append=( text_field_tag : 'post[title]' );@output_buff...
+...                               ^
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:6: syntax error, unexpected ':', expecting ')'
+...buffer.append=( text_area_tag : 'post[description]' );@outpu...
+...                               ^
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:9: syntax error, unexpected keyword_end
+'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                    ^
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/posts/new.html.erb:3: syntax error, unexpected ':', expecting ')'
+  app/views/posts/new.html.erb:6: syntax error, unexpected ':', expecting ')'
+  app/views/posts/new.html.erb:9: syntax error, unexpected keyword_end
+  app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/posts/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-24 11:11:33 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:9: syntax error, unexpected keyword_end
+'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                    ^
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/billieadmin/Development/rails-form_tag-readme-london-web-082718/app/views/posts/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/posts/new.html.erb:9: syntax error, unexpected keyword_end
+  app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/posts/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/billieadmin/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-24 11:11:57 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 690ms (Views: 689.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-09-24 11:12:03 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZcTolk7mH4jKhG5ahAiSJz1vucTm+kYpaJZ5OosvjbQfNK970tESNO9ozlr3i1gifcODPYjbmcrtOqZS0vWl5g==", "post"=>{"title"=>"test2", "description"=>"tesre3"}, "commit"=>"Submit Post"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test2"], ["description", "tesre3"], ["created_at", "2018-09-24 10:12:03.176768"], ["updated_at", "2018-09-24 10:12:03.176768"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 19ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-24 11:12:03 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.3ms)
